@@ -13,15 +13,11 @@ test('heroCreate', () => {
 });
 
 test('nameLength', () => {
-  expect(() => {
-    const hero = new Character('h', 'Bowman');
-  }).toThrow('Имя должно содержать от 2 до 10 символов');
+  expect(() => new Character('h', 'Bowman')).toThrow('Имя должно содержать от 2 до 10 символов');
 });
 
 test('characterType', () => {
-  expect(() => {
-    const hero = new Character('hero', 'noname');
-  }).toThrow('Укажите тип персонажа');
+  expect(() => new Character('hero', 'noname')).toThrow('Укажите тип персонажа');
 });
 
 test('levelUpError', () => {
